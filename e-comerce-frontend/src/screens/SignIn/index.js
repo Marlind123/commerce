@@ -15,9 +15,9 @@ function Index() {
       setLoading(true)
       const {statusCode, data} = await Api.postRequest('/api/user/signin', {
         email,
-
         password,
       })
+      
       setLoading(false)
       if (statusCode === 400 || statusCode === 500 || statusCode === 403) {
         setLoading(false)

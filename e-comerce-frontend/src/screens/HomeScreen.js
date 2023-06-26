@@ -14,7 +14,7 @@ const HomeScreen = () => {
 
   const getProducts = useSelector(state => state.getProducts)
   const {products, loading, error} = getProducts
-
+  console.log(products)
   useEffect(() => {
     dispatch(listProducts())
   }, [dispatch])
@@ -22,7 +22,7 @@ const HomeScreen = () => {
   useEffect(() => {
     dispatch(setUserDeatils())
   }, [dispatch])
-
+  console.log("homescreen")
   return (
     <div className="homescreen">
       <h2 className="homescreen__title">Latest Products</h2>

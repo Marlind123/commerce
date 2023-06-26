@@ -10,6 +10,7 @@ export const setUserDeatils = () => async dispatch => {
     })
     return
   }
+  
   const {user} = JSON.parse(data)
   dispatch({
     type: actionTypes.SET_USER,

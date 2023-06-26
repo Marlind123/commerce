@@ -36,7 +36,6 @@ const signInUser = async (req, res) => {
     }
     sendResponseError(400, 'InValid password !', res)
   } catch (err) {
-    console.log('EROR', err)
     sendResponseError(500, `Error ${err}`, res)
   }
 }

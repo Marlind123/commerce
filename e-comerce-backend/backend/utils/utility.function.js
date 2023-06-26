@@ -21,6 +21,7 @@ const newToken = user => {
 
 const verifyToken = token =>
   new Promise((resolve, reject) => {
+    console.log(JWT,"asff")
     jwt.verify(token, JWT.jwt, (err, payload) => {
       if (err) return reject(err)
       resolve(payload)
